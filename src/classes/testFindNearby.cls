@@ -5,5 +5,7 @@
        insert w;
 
        FindNearby.getNearby('37.794428', '-122.394782');
+       
+       //TESTING THE GIT SFF CONNECTION VIA JENKINS
     }
 }
