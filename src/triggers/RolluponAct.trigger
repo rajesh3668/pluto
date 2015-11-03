@@ -4,8 +4,6 @@ trigger RolluponAct on Account (before update, before insert) {
  	/*
  	THIS IS JUST A GIT HUB TEST 
  	
- 	THIS IS JUST A GIT HUB TEST 	
- 	
  	*/
  
  }
