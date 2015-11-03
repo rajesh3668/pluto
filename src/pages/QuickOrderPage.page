@@ -1,6 +1,6 @@
-<apex:page standardController="Account" extensions="QuickOrderController" docType="html-5.0" standardStylesheets="false" showheader="false" sidebar="false">
-      
-      <!--Include Stylesheets for the Mobile look and feel -->
+<apex:page standardController="Account" >
+    
+      <!--Include Stylesheets for the Mobile look and feel 
       <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates, 
                 'Mobile-Design-Templates-master/common/css/app.min.css')}"/>
       <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
@@ -13,7 +13,7 @@
       <script type='text/javascript' src='/canvas/sdk/js/publisher.js'></script>
       
       <style>
-          /* default S1 color styles */
+          /* default S1 color styles 
           .list-view-header, .data-capture-buttons a {
                 background: -webkit-linear-gradient(#2a93d5,#107abb);
                 background: linear-gradient(#2a93d5,#107abb);
@@ -136,12 +136,12 @@
      </script>
         
         <apex:form id="form">
-        <!-- this is the view for the inital search page -->
+        <!-- this is the view for the inital search page 
         <div id="searchPage">
             <div id="searchInputSection">
             <div class="list-view-header">Enter Search</div>
             <div>
-                <!-- this is the section of the view to enter the search criteria -->
+                <!-- this is the section of the view to enter the search criteria 
                 <section class="border-bottom">
                  <div class="content">
                   <h3>Merchandise Name</h3>
@@ -153,7 +153,7 @@
                  </div>
                 </section>
                 
-                <!-- this is the section of the view to specify the distance radius -->
+                <!-- this is the section of the view to specify the distance radius 
                 <section class="border-bottom">
                  <div class="content">
                   <h3>Max Delivery Distance (miles)</h3>
@@ -178,7 +178,7 @@
           <!-- this section of the page displays the results of the search given the search criteria 
           It looks like a list beneath the search and you can click a list item to view the create 
           quick order form
-          -->
+          
           <div id="searchResultsSection">   
             <div class="list-view-header">Search Results</div>
                 <ul id="searchResults" class="list-view right-one-icons">
@@ -186,7 +186,7 @@
           </div> <!-- end searchResults -->
         </div> <!-- end search page -->
         
-        <!-- this page displays the form to add order criteria -->
+        <!-- this page displays the form to add order criteria 
         <div id="resultPage">
         <div class="list-view-header">Create Quick Order</div>
             <div>
@@ -219,7 +219,7 @@
                     </div>
                 </section>
           </div> 
-        </div> <!-- end result page -->
+        </div> <!-- end result page 
         </apex:form>
         
         <script type='text/javascript'>  
@@ -227,5 +227,5 @@
                 // This subscribe fires when the user hits 'Submit' in the publisher
                 insertQuickOrder();
              }});                                           
-         </script>
+         </script> -->
 </apex:page>

@@ -13,17 +13,5 @@
         Merchandise__c merchTest2 = new Merchandise__c(Name='test MacBook',Price__c=1000,Quantity__c=10,Condition__c='New',Warehouse__c=wareTest2.Id);
         insert merchTest1; insert merchTest2;
         
-        QuickOrderController.findWarehouses(aTest1.Id, 'iPhone', '50');
-        QuickOrderController.findWarehouses(aTest1.Id, 'Macbook', '10');
-        
-        Line_Item__c testQuickOrder = QuickOrderController.createQuickOrder(aTest1.Id, merchTest1.Id);
-        String testOrderSerialized = JSON.serialize(testQuickOrder);
-        QuickOrderController.insertQuickOrder(testOrderSerialized, '100', aTest1.Id);
-        
-        Invoice__c testInv = new Invoice__c(Account__c=aTest1.Id,Status__c='Open');
-        insert testInv;
-        QuickOrderController.goBack(testInv.Id);
-        
-        System.assertEquals(true,WarehouseDataInstall.getHasData());
     }
 }
