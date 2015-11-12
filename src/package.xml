@@ -24,7 +24,7 @@
 	<types>
         <members>*</members>
         <members>Account</members>
-        <Name>CustomObjects</Name>
+        <name>CustomObject</name>
 	
     </types>
 		
