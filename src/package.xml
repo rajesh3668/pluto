@@ -23,8 +23,8 @@
 	
 	<types>
         <members>*</members>
-        <members>Account</members>
-		<name>CustomObject</name>
+        <Name>Account</Name>
+	
     </types>
 		
     <version>35.0</version>
