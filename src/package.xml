@@ -23,7 +23,7 @@
 	
 	<types>
         <members>*</members>
-        <Name>Account</Name>
+        <members>Account</members>
 	
     </types>
 		
