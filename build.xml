@@ -19,4 +19,25 @@
 	  deployRoot="undeploy"/>
 	  </target>
 	  
+	  <target name="retrieve">
+	  <sf:retrieve username="${sf.username}"
+				   password="${sf.password}"
+				   serverurl="${sf.serverurl}"
+				   retrieveTarget="${sf.retrieveTarget}"
+				   unpackaged="${sf.unpackaged}"/>
+        <echo message="Commiting all changes with message ${gt.commitMessage}" />
+		<git command="add" dir="${sf.gitDirectory}">
+			<args>
+				<arg value="." />
+			</args>
+		</git>
+		<git command="commit" dir="${sf.gitDirectory}">
+			<args>
+				<arg value="-am ${gt.commitMessage}" />
+			</args>
+		</git>
+	</target>
+	
+	
+	  
 </project>
