@@ -23,7 +23,7 @@
 	
 	<types>
         <members>*</members>
-        <name>CustomObject</name>
+        <name>sObject</name>
     </types>
 		
     <version>35.0</version>
