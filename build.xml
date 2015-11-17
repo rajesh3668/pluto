@@ -18,7 +18,7 @@
 	  <sf:deploy username="${sf.username}" 
 	  password="${sf.password}" 
 	  serverurl="${sf.serverurl}" 	  
-	  deployRoot="codepkg"/>
+	  deployRoot="undeploy/package.xml"/>
 	  </target>
 	  
 </project>
