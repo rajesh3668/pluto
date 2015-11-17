@@ -10,7 +10,7 @@
 	  serverurl="${sf.serverurl}" 
 	  runAllTests="true"
 	  logType="Detail"
-	  deployRoot="src/package.xml"/>
+	  deployRoot="src"/>
 	  </target>
 	  
 	
@@ -18,7 +18,7 @@
 	  <sf:deploy username="${sf.username}" 
 	  password="${sf.password}" 
 	  serverurl="${sf.serverurl}" 	  
-	  deployRoot="undeploy/package.xml"/>
+	  undeployRoot="undeploy/package.xml"/>
 	  </target>
 	  
 </project>
