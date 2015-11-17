@@ -11,4 +11,11 @@
         <name>ApexTrigger</name>
     </types>
     <version>35.0</version>
+    
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <version>35.0</version>
+    
 </Package>
