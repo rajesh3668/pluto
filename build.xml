@@ -10,7 +10,7 @@
 	  serverurl="${sf.serverurl}" 
 	  runAllTests="true"
 	  logType="Detail"
-	  deployRoot="src"/>
+	  deployRoot="src/package.xml"/>
 	  </target>
 	  
 	
