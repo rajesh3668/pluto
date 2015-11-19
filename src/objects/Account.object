@@ -4,26 +4,13 @@
     <fields>
         <fullName>CustomField__C</fullName>
         <externalId>false</externalId>
-        <label>CustomField1</label>
+        <label>RajeshSingh</label>
         <length>10</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    
-    
-        <fields>
-        <fullName>Rajesh__c</fullName>
-        <externalId>false</externalId>
-        <label>Rajesh</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    
     
     
     <fields>
