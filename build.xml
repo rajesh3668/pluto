@@ -3,6 +3,7 @@
     <property file="build.properties"/>
     <property environment="env"/>
 
+<!--
 
     <target name="deployRunAllTests">
       <sf:deploy username="${sf.username}" 
@@ -20,5 +21,61 @@
 	  serverurl="${sf.serverurl}" 	  
 	  undeployRoot="undeploy/package.xml"/>
 	  </target>
+-->
+
+
+<taskdef uri="antlib:com.salesforce"
+			 resource="com/salesforce/antlib.xml"
+			 classpath="${basedir}/lib/ant-salesforce.jar"/>
+	
+	<property file="build.properties"/>
+	<property environment="env"/>
+	
+	<import file="${basedir}/lib/exec_anon.xml"/>
+	<import file="${basedir}/lib/deploy.xml"/>
+	<import file="${basedir}/lib/undeploy.xml"/>
+	<import file="${basedir}/lib/run_tests.xml"/>
+	<import file="${basedir}/lib/package_generator.xml"/>
+	
+	<target name="LoadCustomSettings">
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/customSettings.txt" />
+	  </antcall>
+	</target>
+	
+	<target name="LoadBasicDataset">
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/basic.txt" />
+	  </antcall>
+	</target>
+	
+	<target name="LoadVolumeDataset">
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/volumeTest.txt" />
+	  </antcall>
+	</target>
+	
+	<target name="CleanUp">
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/cleanup.txt" />
+	  </antcall>
+	</target>
+	
+	<target name="RunEverything">
+	  <antcall target="undeploy"/>
+	  <antcall target="deploy"/>
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/cleanup.txt" />
+	  </antcall>
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/customSettings.txt" />
+	  </antcall>
+	  <antcall target="ExecAnonScript">
+		<param name="what" value="datasets/volumeTest.txt" />
+	  </antcall>
+	  <antcall target="RunTests"/>
+	</target>
+
+	  
 	  
 </project>
