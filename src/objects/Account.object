@@ -16,7 +16,7 @@
         <fields>
         <fullName>Rajesh__c</fullName>
         <externalId>false</externalId>
-        <label>Rajesh__c</label>
+        <label>Rajesh</label>
         <length>10</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
