@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <fields>
-        <fullName>CustomField20__c</fullName>
+        <fullName>CustomField5__c</fullName>
         <externalId>false</externalId>
         <label>CustomField5</label>
         <length>10</length>
