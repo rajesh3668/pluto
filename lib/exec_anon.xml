@@ -56,7 +56,7 @@
 		<text name="apexcode"/>
 		<sequential>
 			<!-- Login -->			
-			<login username="@{username}" password="@{password}" serverurl="serverUrl" sessionId="sessionId"/>
+			<login username="@{username}" password="@{password}" serverurl="serverUrl"/>
 			<!-- Extract host/instance name from the serverUrl returned from the login response -->
 			<propertyregex property="host"
               input="${serverUrl}"
@@ -65,9 +65,7 @@
               casesensitive="false" />			
 			<!-- Execute Apex via Tooling API /executeAnonymous resource -->
 		    <http url="https://${host}/services/data/v30.0/tooling/executeAnonymous" method="GET" entityProperty="executeAnonymousResponse" statusProperty="loginResponseStatus" printrequestheaders="false" printresponseheaders="false">
-		    	<headers>
-		    		<header name="Authorization" value="Bearer ${sessionId}"/>
-		    	</headers>
+		    	
 		    	<query>
 		    		<parameter name="anonymousBody" value="@{apexcode}"/>
 		    	</query>
@@ -104,7 +102,6 @@
 		<attribute name="username" description="Salesforce user name."/>
 		<attribute name="password" description="Salesforce password."/>	
 		<attribute name="serverurl" description="Server Url property."/>
-		<attribute name="sessionId" description="Session Id property."/>
 		<sequential>
 			<!-- Obtain Session Id via Login SOAP service -->
 		    <http url="https://login.salesforce.com/services/Soap/c/30.0" method="POST" failonunexpected="false" entityProperty="loginResponse" statusProperty="loginResponseStatus">
@@ -135,7 +132,6 @@
 				<then> 
 					<!-- Parse sessionId and serverUrl -->
 					<xmltask sourcebuffer="loginResponseBuffer" failWithoutMatch="true">
-						<copy path="/*[local-name()='Envelope']/*[local-name()='Body']/:loginResponse/:result/:sessionId/text()" property="@{sessionId}"/>
 						<copy path="/*[local-name()='Envelope']/*[local-name()='Body']/:loginResponse/:result/:serverUrl/text()" property="@{serverUrl}"/>
 					</xmltask>					
 				</then>
