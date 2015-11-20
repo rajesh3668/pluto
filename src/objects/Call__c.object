@@ -2,9 +2,9 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <fields>
-        <fullName>CustomField5555__c</fullName>
+        <fullName>test__c</fullName>
         <externalId>false</externalId>
-        <label>CustomField5555</label>
+        <label>test</label>
         <length>10</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
