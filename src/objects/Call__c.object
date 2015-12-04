@@ -92,8 +92,8 @@
         <externalId>false</externalId>
         <label>Accountzz</label>
         <referenceTo>Account</referenceTo>
-        <relationshipLabel>Calls</relationshipLabel>
-        <relationshipName>Calls</relationshipName>
+        <relationshipLabel>Callszz</relationshipLabel>
+        <relationshipName>Callszz</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackHistory>false</trackHistory>
