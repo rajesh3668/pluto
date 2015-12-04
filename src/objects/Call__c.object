@@ -85,6 +85,24 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     
+    
+    
+    <fields>
+        <fullName>Accountzz__c</fullName>
+        <externalId>false</externalId>
+        <label>Accountzz</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Calls</relationshipLabel>
+        <relationshipName>Calls</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    
+    
      <fields>
         <fullName>Rajesh__c</fullName>
         <externalId>false</externalId>
