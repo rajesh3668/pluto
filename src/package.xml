@@ -4,11 +4,12 @@
         <members>acctvf</members>
         <name>ApexClass</name>
     </types>
-    <types>
+  <!--
+  <types>
         <members>*</members>
         <name>ApexComponent</name>
     </types>
-    <types>
+    <types> 
         <members>*</members>
         <name>ApexPage</name>
     </types>
@@ -55,5 +56,6 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+    -->
     <version>35.0</version>
 </Package>
