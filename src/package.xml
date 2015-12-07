@@ -4,7 +4,7 @@
         <members>acctvf</members>
         <name>ApexClass</name>
     </types>
-  <!--
+  
   <types>
         <members>*</members>
         <name>ApexComponent</name>
@@ -56,6 +56,6 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    -->
+   
     <version>35.0</version>
 </Package>
