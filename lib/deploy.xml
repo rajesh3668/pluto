@@ -15,9 +15,12 @@
 	<target name="makePackage" description="Deploys code local src dir to salesforce org specified in build.properties!" depends="clearPackage">
 	  <zip destfile="deploy.zip" update="true">
 		<fileset dir="src" includes="package.xml"/>
-		<fileset dir="src" includes="applications/*.app"/>
+		
 		<fileset dir="src" includes="classes/*.cls,classes/*-meta.xml"/>
+	
+	<!--
 		<fileset dir="src" includes="components/*.component,components/*-meta.xml"/>
+		<fileset dir="src" includes="applications/*.app"/>
 		<fileset dir="src" includes="documents/" excludes=".svn/" />
 		<fileset dir="src" includes="homePageComponents/" excludes=".svn/" />
 		<fileset dir="src" includes="labels/CustomLabels.labels"/>
@@ -31,6 +34,8 @@
 		<fileset dir="src" includes="triggers/*.trigger,triggers/*-meta.xml"/>
 		<fileset dir="src" includes="weblinks/"/>
 		<fileset dir="src" includes="workflows/*.workflow"/>
+		
+		-->
 	  </zip>
 	</target>
 
