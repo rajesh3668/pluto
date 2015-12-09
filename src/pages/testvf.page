@@ -1,5 +1,0 @@
-<apex:page controller="testvfclass">
-	<BR>
-	<h1>Hello {!usera}!</h1>
-	</BR>
-</apex:page>

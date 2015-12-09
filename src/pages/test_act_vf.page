@@ -1,6 +1,0 @@
-<apex:page standardController="Account" tabStyle="account"
-	showheader="true" sidebar="false">
-	<apex:iframe height="1500" width="1500"
-		src="http://www.infallibletechie.com/" scrolling="true" />
-
-</apex:page>
